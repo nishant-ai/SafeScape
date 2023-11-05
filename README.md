@@ -1,5 +1,3 @@
-[](https://github.com/nishant-ai/SafeScape/blob/33c227b2ae251fa014096f6d998309a1c897f053/Wallpaper.png)
-
 ## Why Safescape (Problem Statement)
 
 [Presentation](https://github.com/nishant-ai/SafeScape/blob/main/Presentation.pdf)
