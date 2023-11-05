@@ -1,5 +1,7 @@
 ## Why Safescape (Problem Statement)
 
+[Presentation](https://github.com/nishant-ai/SafeScape/blob/main/Presentation.pdf)
+
 Making decisions about where to reside or open a business can be fraught with danger because many people find it difficult to obtain reliable crime statistics. Safescape.biz steps in by offering straightforward crime data and a mechanism for the public to identify high-crime zones. This assists users in choosing their locations in a safer and more informed manner.
 
 Anyone can utilise it, regardless of whether they're searching for business solutions or just secure places to live and vacation.
