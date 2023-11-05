@@ -20,7 +20,7 @@ const Navbar = () => {
                             <a className="text-black" href="#contact">Pricing</a>
                         </li>
                         <li>
-                    <button>
+                    <button className="text-white border-0 rounded-3xl bg-[#FE9900] px-7 py-3">
                         Get Api Key
                     </button>
                     </li>
