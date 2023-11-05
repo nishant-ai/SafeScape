@@ -1,6 +1,11 @@
 ## Abstract
 Safescape.biz offers a safety-focused platform with precise crime statistics and community input, enabling individuals and businesses to make secure location choices. It's your key to informed, safe living.
 
+### Featuring:
+
+- Our platform maintains Data Authenticity by analyzing various sources such as News, Articles, and anonymous location-verified Community Inputs.
+- Our platform may provide businesses with a unique API Key, with a Freemium Business Model.
+- Future Updations shall include Indirect features resulting in higher crime rates at particular locations.
 
 ## About Safescape
 
@@ -27,7 +32,7 @@ Safescape.biz was created by Team Zero at HackCBS, featuring the collaborative e
 
 ## How Does It Work?
 
-This software works upon the magic of techological stack constituting:
+This software works upon the magic of technological stack constituting:
 
 - The NLP Module for Providing Updated Data through sources such as News and Articles.
 
