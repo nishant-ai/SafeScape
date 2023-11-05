@@ -6,7 +6,7 @@ router.get("/", async (req, res) => {
 });
 
 // Create User
-router.post("/create", async (req, res) => {
+router.get("/create", async (req, res) => {
   const api_key = crypto.randomBytes(25).toString("hex");
 
   console.log(randomString);
