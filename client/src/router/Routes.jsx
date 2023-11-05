@@ -2,6 +2,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layouts/Mainlayout";
 import Home from "../pages/Home";
 import Community from "../pages/Community";
+import Demo from "../pages/Demo";
 
 const Routes = () => {
   const router = createBrowserRouter([
@@ -17,6 +18,10 @@ const Routes = () => {
           path: "/community",
           element: <Community />,
         },
+        {
+            path:"/demo",
+            element:<Demo/>,
+        }
       ],
     },
   ]);

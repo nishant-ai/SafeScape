@@ -30,7 +30,7 @@ const Team = () => {
                         </h1>
 
                         <p className="text-gray-700 text-lg font-light text-center">
-                            With over 100 years of combined experience, we've got a well-seasoned team at the helm.
+                            With over 100 years of combined experience, we have got a well-seasoned team at the helm.
                         </p>
                     </div>
             </section>

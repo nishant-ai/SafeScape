@@ -71,7 +71,7 @@ button:focus-visible {
   }
 }
 .leaflet-container{
-  height:55rem;
-  width:48vw;
+  height:50rem;
+  width:75vw;
   border-radius:3rem;
 }

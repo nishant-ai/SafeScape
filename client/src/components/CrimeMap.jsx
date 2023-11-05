@@ -1,8 +1,9 @@
-import {TileLayer,MapContainer,Marker,Popup} from "react-leaflet";
-import L from 'leaflet';
-// postCSS import of Leaflet's CSS
-import 'leaflet/dist/leaflet.css';
+// import {TileLayer,MapContainer,Marker,Popup} from "react-leaflet";
+// import L from 'leaflet';
+// // postCSS import of Leaflet's CSS
+// import 'leaflet/dist/leaflet.css';
 import boyrunning from "../assets/boyrunning.png";
+import {Link} from 'react-router-dom'
 
 const CrimeMap = () => {
     const position=[28.7041,77.1025];
@@ -21,7 +22,9 @@ const CrimeMap = () => {
       <div className="flex justify-start flex-col space-y-4 items-start">
         <p className="text-black">Try Out the Demo!</p>
         <div className="gap-4 flex justify-start items-center">
-        <button className="text-white border-[#FE9900] hover:border-black hover:bg-transparent hover:text-black transition-all duration-200 rounded-3xl bg-[#FE9900] border-2 px-7 py-3">Get Demo</button>
+          <Link to='/demo'>
+        <button  className="text-white border-[#FE9900] hover:border-black hover:bg-transparent hover:text-black transition-all duration-200 rounded-3xl bg-[#FE9900] border-2 px-7 py-3">Get Demo</button>
+        </Link>
         <button className="border-2 bg-transparent text-black border-black hover:border-[#FE9900] hover:text-white rounded-3xl hover:bg-[#FE9900] px-7 py-3 transition-all duration-200">Get API Key</button>
         </div>
       </div>
@@ -29,7 +32,7 @@ const CrimeMap = () => {
 
       </div>
     </div>
-    <div className="w-1/2 -mt-56 pr-20">
+    {/* <div className="w-1/2 -mt-56 pr-20 h-screen">
     <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
      <TileLayer
       attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -41,7 +44,7 @@ const CrimeMap = () => {
       </Popup>
     </Marker>
   </MapContainer>
-  </div>
+  </div> */}
   </div>
   )
 }
