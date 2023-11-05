@@ -1,17 +1,17 @@
-import { useState, useEffect } from 'react';
-import Select from 'react-select';
-import { TileLayer, MapContainer, Marker, Popup } from 'react-leaflet';
-import L from 'leaflet';
-import 'leaflet/dist/leaflet.css';
-import locationApi from '../api/location';
-import crimeApi from '../api/crime';
+import { useState, useEffect } from "react";
+import Select from "react-select";
+import { TileLayer, MapContainer, Marker, Popup } from "react-leaflet";
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
+import locationApi from "../api/location";
+import axios from "axios";
 
 const customStyles = {
   option: (provided, state) => ({
     ...provided,
-    backgroundColor: state.isSelected ? '#f0f0f0' : 'white',
-    color: state.isSelected ? 'black' : 'gray',
-    cursor: 'pointer',
+    backgroundColor: state.isSelected ? "#f0f0f0" : "white",
+    color: state.isSelected ? "black" : "gray",
+    cursor: "pointer",
   }),
 };
 
@@ -21,18 +21,23 @@ const DemoMap = () => {
   const [selectedLocation, setSelectedLocation] = useState(null);
   const [crimeData, setCrimeData] = useState([]);
 
-  const handleLocationChange = async selectedOption => {
-    const [District, State] = selectedOption.label.split(', ');
+  const handleLocationChange = async (selectedOption) => {
+    const [District, State] = selectedOption.label.split(", ");
     setSelectedLocation({ District, State });
-    console.log(selectedLocation)
+    console.log(selectedLocation);
 
     try {
-      const crimeResponse = await crimeApi.getCrimeData({ District, State });
-      if (crimeResponse && crimeResponse.data) {
-        setCrimeData(crimeResponse.data);
-      }
+      console.log(District, State);
+      axios
+        .get(
+          `http://localhost:8000/crime/getlocation/District=${District}&State=${State}`
+        )
+        .then((res) => {
+          console.log(res.data);
+          setCrimeData(res.data);
+        });
     } catch (error) {
-      console.error('Error fetching crime data:', error);
+      console.error("Error fetching crime data:", error);
     }
   };
 
@@ -40,9 +45,9 @@ const DemoMap = () => {
     (async () => {
       try {
         const res = await locationApi.getLocations();
-        if (!res) throw new Error('Failed to fetch locations');
+        if (!res) throw new Error("Failed to fetch locations");
         setOptions(
-          res.map(location => ({
+          res.map((location) => ({
             label: location.location,
             value: location.location,
           }))

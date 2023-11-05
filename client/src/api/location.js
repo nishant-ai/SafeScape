@@ -11,11 +11,12 @@ const locationApi = {
   },
   addLocations: async (data) => {
     try {
-        const response = await instance.post('/location/add-location', data);
-        return response.data;
-        } catch (err) {
-            console.log("Error in adding locations", err);
-            }
-  }
+      const response = await instance.post("/location/add-location", data);
+      console.log(response);
+      return response.data;
+    } catch (err) {
+      console.log("Error in adding locations", err);
+    }
+  },
 };
 export default locationApi;
