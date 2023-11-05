@@ -1,17 +1,18 @@
 import logo from "../../assets/safescape.png"
+import {Link} from "react-router-dom"
 const Navbar = () => {
     return(
         // Desktop <div>
             <nav className="flex justify-start items-center pt-5 px-5 pb-10">
                 <div className="flex justify-around items-center">
-                    <div className="flex justify-center items-center">
+                    <Link to="/" className="flex justify-center items-center">
                         <img src={logo}
                             alt="logo" className="w-16 h-16"/>
                         <p className="text-black font-semibold text-xl">Safe<span className="text-[#FE9900]">Scape</span></p>
-                    </div>
+                    </Link>
                     <ul className="hidden md:flex space-x-10 ml-16 mr-10 items-center justify-center">
                         <li>
-                            <a className="text-black" href="#about">About Us</a>
+                            <Link className="text-black" to="#team">Team</Link>
                         </li>
                         <li>
                             <a className="text-black" href="#services">Services</a>
