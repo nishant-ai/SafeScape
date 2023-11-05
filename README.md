@@ -42,3 +42,6 @@ This software works upon the magic of technological stack constituting:
 - Rigorous Data Analytics and Robust API Provided by Safescape that is easy to access and understand.
 
 - User-friendly Interface enabling developers to access the tool provided.
+
+
+### 
