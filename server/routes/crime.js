@@ -59,7 +59,7 @@ router.post("/create", async (req, res) => {
   } catch (err) {
     console.error(err.message);
     res.status(500).send("Error creating a crime.");
-  }
+  }{ District, State }
   res.send(crime);
 });
 
@@ -86,9 +86,14 @@ router.get("/all", async (req, res) => {
 });
 
 // Retrieve Crime Per Location
-router.get("/:state/:district", async (req, res) => {
-  const { state, district } = req.params;
-  const crime = await Crime.find({ state, district });
+router.get("/getlocation/:location", async (req, res) => {
+  const locationString = req.params.location;
+  const keyValuePairs = locationString.split('&');
+  const District = keyValuePairs[0].split('=')[1];
+const State = keyValuePairs[1].split('=')[1];
+  // const [state, district] = locationString.split(', ');
+  const crime = await Crime.find({ District, State });
+  console.log(crime);
   res.send(crime);
 });
 
