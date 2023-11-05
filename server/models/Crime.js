@@ -1,20 +1,21 @@
 const mongoose = require("mongoose");
 
 const CrimeSchema = new mongoose.Schema({
-  year: {
+  Year: {
     type: String,
   },
-  district: {
+  District: {
     type: String,
   },
-  state: {
+  State: {
     type: String,
   },
-  crime_type: {
+  CrimeType: {
     type: String,
   },
-  crime_rate: {
+  CrimeRate: {
     type: String,
+    default: 0,
   },
 });
 

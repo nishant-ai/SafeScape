@@ -1,4 +1,4 @@
-import logo from "../../assets/macverinlogo.png"
+import logo from "../../assets/safescape.png"
 const Navbar = () => {
     return(
         // Desktop <div>
@@ -6,8 +6,8 @@ const Navbar = () => {
                 <div className="flex justify-around items-center">
                     <div className="flex justify-center items-center">
                         <img src={logo}
-                            alt="logo" className="w-12 h-12 rounded p-1 bg-black"/>
-                        <p className="text-black font-semibold text-xl">SafeScape</p>
+                            alt="logo" className="w-16 h-16"/>
+                        <p className="text-black font-semibold text-xl">Safe<span className="text-[#FE9900]">Scape</span></p>
                     </div>
                     <ul className="hidden md:flex space-x-10 ml-16 mr-10 items-center justify-center">
                         <li>

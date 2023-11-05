@@ -1,55 +1,82 @@
 const axios = require("axios");
 const router = require("express").Router();
+const Crime = require("../models/Crime");
+const Location = require("../models/Location");
 
 router.get("/", async (req, res) => {
   res.send(`Crime API!`);
 });
 
 router.post("/create", async (req, res) => {
-  const { latitude, longitude } = req.body;
+  const { latitude, longitude, CrimeType } = req.body;
 
   // Get Location
   endpoint = `https://api.api-ninjas.com/v1/reversegeocoding?lat=${latitude}&lon=${longitude}`;
+  console.log(process.env.VITE_API_NINJAS_KEY);
 
   const latlong_to_locname = async () => {
     const loc = await axios.get(
       endpoint,
       (headers = {
-        "X-Api-Key": process.env.API_NINJAS_KEY,
+        "X-Api-Key": process.env.VITE_API_NINJAS_KEY,
       })
     );
     return loc;
   };
-
-  const location = latlong_to_locname();
+  
+  const location = await latlong_to_locname();
+  console.log(location);
   const district = location[0].name;
   const state = location[0].state;
+  //if Year does not come then take current year
+  let date = new Date().getFullYear();
+  Year = date;
 
   const crime = new Crime({
-    year,
-    district,
-    state,
-    crime_type,
-    crime_rate,
+    Year,
+    District,
+    State,
+    CrimeType,
+    CrimeRate,
   });
 
-  await crime.save();
+  const loc = `${district}, ${state}`;
+  try {
+    if (Location.findOne(loc)) {
+      console.log("location already exists");
+    } else {
+      let newLoc = new Location({
+        location: loc,
+      });
+      await newLoc.save();
+    }
+  } catch (err) {
+    console.error(err.message);
+  }
+  try {
+    await crime.save();
+    res.status(201).json("Crime created!");
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Error creating a crime.");
+  }
   res.send(crime);
 });
 
 // Create Crime (Check User Location to Verify)
 router.post("/create-by-admin", async (req, res) => {
-  const { year, district, state, crime_type, crime_rate } = req.body;
-  const crime = new Crime({
-    year,
-    district,
-    state,
-    crime_type,
-    crime_rate,
-  });
+  const obj = req.body;
+  // const crime = new Crime({
+  //   Year,
+  //   District,
+  //   State,
+  //   CrimeType,
+  //   CrimeRate,
+  // });
 
-  await crime.save();
-  res.send(crime);
+  await Crime.insertMany(obj);
+  res.json("Data inserted successfully");
+  res.send("okay");
 });
 
 // Retrieve All Crime
