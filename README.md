@@ -44,4 +44,10 @@ This software works upon the magic of technological stack constituting:
 - User-friendly Interface enabling developers to access the tool provided.
 
 
-### 
+### Project Category 🙌
+
+🚩 Most Creative Use of GitHub. 
+
+🚩 Best Use of MongoDB Atlas.
+
+🚩 Best Domain Name for Go Daddy Registry.
