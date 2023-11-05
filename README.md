@@ -1,8 +1,8 @@
 ## Why Safescape (Problem Statement)
 
-Many struggle to find accurate crime data when deciding where to live or set up a business, which can lead to risky choices. Safescape.biz steps in, providing clear crime statistics and a way for the community to flag high-crime areas. This helps users make safer, well-informed decisions about their locations.
+Making decisions about where to reside or open a business can be fraught with danger because many people find it difficult to obtain reliable crime statistics. Safescape.biz steps in by offering straightforward crime data and a mechanism for the public to identify high-crime zones. This assists users in choosing their locations in a safer and more informed manner.
 
-It can be used by anyone, whether they are looking for Business solutions or simply seeking safe spots for travel and living.
+Anyone can utilise it, regardless of whether they're searching for business solutions or just secure places to live and vacation.
 
 
 ## Abstract
