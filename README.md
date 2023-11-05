@@ -17,6 +17,8 @@ Our platform provides you with a powerful tool to assess the safety of areas, of
 
 Many struggle to find accurate crime data when deciding where to live or set up a business, which can lead to risky choices. Safescape.biz steps in, providing clear crime statistics and a way for the community to flag high-crime areas. This helps users make safer, well-informed decisions about their locations.
 
+It can be used by anyone, whether they are looking for Business solutions or simply seeking safe spots for travel and living.
+
 ### Team
 
 Safescape.biz was created by Team Zero at HackCBS, featuring the collaborative efforts of:
