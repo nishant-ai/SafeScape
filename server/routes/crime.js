@@ -12,7 +12,12 @@ router.post("/create", async (req, res) => {
   endpoint = `https://api.api-ninjas.com/v1/reversegeocoding?lat=${latitude}&lon=${longitude}`;
 
   const latlong_to_locname = async () => {
-    const loc = await axios.get(endpoint);
+    const loc = await axios.get(
+      endpoint,
+      (headers = {
+        "X-Api-Key": process.env.API_NINJAS_KEY,
+      })
+    );
     return loc;
   };
 
