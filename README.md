@@ -15,7 +15,11 @@ Many struggle to find accurate crime data when deciding where to live or set up 
 ### Team
 
 Safescape.biz was created by Team Zero at HackCBS, featuring the collaborative efforts of:
-- [Nishant Sharma](https://www.github.com/nishant-ai)
-- [Priyanshu Gupta](https://www.github.com/nishant-ai)
-- [Parul Singh](https://www.github.com/CodeWithParul)
-- [Digvijay Singh Shekhawat](https://www.github.com/DIGVI962)
+
+[Nishant Sharma](https://www.github.com/nishant-ai)
+
+[Priyanshu Gupta](https://www.github.com/nishant-ai)
+
+[Parul Singh](https://www.github.com/CodeWithParul)
+
+<img src="https://camo.githubusercontent.com/7aef9ce4e3957e1650678f70f36eaea3da867ddbc4b26ccff209cfe2dbf14d51/68747470733a2f2f6f63746f6465782e6769746875622e636f6d2f696d616765732f6f726967696e616c2e706e67" alt="" style="height: 10px; width: auto;" /> [Digvijay Singh Shekhawat](https://www.github.com/DIGVI962)
