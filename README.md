@@ -3,7 +3,7 @@ Safescape.biz offers a safety-focused platform with precise crime statistics and
 
 ### Featuring:
 
-- Our platform maintains Data Authenticity by analyzing various sources such as News, Articles, and anonymous location-verified Community Inputs.
+- Our platform maintains Data Authenticity by analyzing various sources such as government-provided data, News, Articles, and anonymous location-verified Community Inputs.
 - Our platform may provide businesses with a unique API Key, with a Freemium Business Model.
 - Future Updations shall include Indirect features resulting in higher crime rates at particular locations.
 
